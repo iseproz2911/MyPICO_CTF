@@ -1,0 +1,20 @@
+WEB Exploition 
+Description
+Connect to this PostgreSQL server and find the flag!
+    psql -h saturn.picoctf.net -p 57555 -U postgres pico
+    Password is postgres
+pico /help
+pico \?
+pico \l
+    Display 4 rows 
+pico=# \c pico
+    => Alert ("You are now connected to database "pico" as user "postgres")
+pico=# \dt
+    Table(2 row,4 column)
+    Choose(flag) for key of Pico Challenges == flag(in row(2)column(2))
+pico=# \dt 
+    =>Display(Secert Key)
+pico=# sql = "SELECT * FROM Table WHERE flagID = Key_Secret";
+              command = new SqlCommand(sql);
+    Result = picoCTF{L3arN_S0m3_5qL_t0d4Y_0414477f} 
+pause 
